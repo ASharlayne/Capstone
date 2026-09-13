@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASharlayne &mdash; Web Development Portfolio</title>
+<meta name="description" content="A capstone portfolio of five web development class projects, from a first HTML/CSS page through an accessibility-audited developer portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="header-nav" aria-label="Primary">
+    <a class="header-brand" href="index.html">ASharlayne</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div class="header-links" id="primary-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About &amp; Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>Building the web, one assignment at a time.</h1>
+        <p class="lede">I'm a web development student in Florida working in plain HTML, CSS, and JavaScript &mdash; no frameworks. This site walks through five class projects in the order I built them, each one adding a skill the last one didn't have.</p>
+        <div class="cta-row">
+          <a class="button" href="projects.html">See the projects</a>
+          <a class="button-secondary" href="about.html">About &amp; contact</a>
+        </div>
+      </div>
+      <div class="stat-panel" aria-label="Portfolio highlights">
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">class projects, Homework 1 through the Milestone Project</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">0</span>
+          <span class="stat-label">WAVE errors on the latest accessibility pass</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">vanilla HTML, CSS &amp; JavaScript &mdash; no frameworks or build step</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="featured-projects">
+    <div class="container">
+      <h2>A few places to start</h2>
+      <div class="featured-grid">
+        <article class="project-card">
+          <h3>Trailhead: Interactive DOM Project</h3>
+          <p>A bird- and trail-watching page with a live "margin meter," cycling trail tips, and a sightings log you can add to and remove from &mdash; all direct DOM manipulation.</p>
+          <div class="tech-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">DOM</span>
+          </div>
+          <a class="view-link" href="https://ASharlayne.github.io/homework7web-dev/" target="_blank" rel="noopener noreferrer">View live site<span class="sr-only">: Trailhead</span> &rarr;</a>
+        </article>
+        <article class="project-card">
+          <h3>Accessible Contact Form + API</h3>
+          <p>Client-side validation with screen-reader-friendly inline errors, plus an optional fetch to the Advice Slip API that fails gracefully if the request doesn't come back.</p>
+          <div class="tech-tags">
+            <span class="tag">Fetch API</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <a class="view-link" href="https://asharlayne.github.io/Homework-8-Form-with-Validation-API-Fetch/" target="_blank" rel="noopener noreferrer">View live site<span class="sr-only">: Accessible Contact Form + API</span> &rarr;</a>
+        </article>
+        <article class="project-card">
+          <h3>Milestone Project: Developer Portfolio</h3>
+          <p>A full WAVE and axe-core audit across three pages &mdash; 0 errors, 0 alerts &mdash; with a documented contrast table and Gestalt-based layout grouping.</p>
+          <div class="tech-tags">
+            <span class="tag">WCAG AA</span>
+            <span class="tag">axe-core</span>
+          </div>
+          <a class="view-link" href="projects.html#milestone-project">View details &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 ASharlayne. Built for a web development capstone.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ASharlayne" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

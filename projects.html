@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects &mdash; ASharlayne</title>
+<meta name="description" content="Five web development class projects in the order they were built, from a first HTML page to an accessibility-audited developer portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="header-nav" aria-label="Primary">
+    <a class="header-brand" href="index.html">ASharlayne</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div class="header-links" id="primary-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="about.html">About &amp; Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container prose timeline-intro">
+    <h1>Projects</h1>
+    <p>Five assignments, in the order I built them. Each one was a chance to practice one new thing on top of everything before it &mdash; so instead of a flat grid, this is a timeline.</p>
+  </div>
+
+  <div class="container">
+    <ol class="timeline">
+      <li class="timeline-item" id="homework-1">
+        <span class="timeline-marker" aria-hidden="true">1</span>
+        <div class="timeline-card">
+          <span class="timeline-skill">Skill: HTML &amp; CSS fundamentals</span>
+          <h2>Homework 1 &mdash; First Portfolio Page</h2>
+          <p>My first real page: a single-file introduction built to practice the box model and basic layout, with a profile photo and a short bio, before any framework or build tooling entered the picture.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+          <div class="timeline-links">
+            <a class="view-link" href="https://github.com/ASharlayne/homework_1" target="_blank" rel="noopener noreferrer">View code<span class="sr-only">: Homework 1</span> &rarr;</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item" id="homework-7">
+        <span class="timeline-marker" aria-hidden="true">2</span>
+        <div class="timeline-card">
+          <span class="timeline-skill">Skill: JavaScript &amp; the DOM</span>
+          <h2>Homework 7 &mdash; Trailhead: Interactive DOM Project</h2>
+          <p>A bird- and trail-watching themed page. Clicking "Show another tip" cycles through trail tips, typing a species name fills a live "margin meter" bar that changes color as you type, and an "Add to log" button builds a running sightings list you can add to and remove from &mdash; all through <code>addEventListener</code>, <code>createElement</code>, and <code>appendChild</code>, no libraries.</p>
+          <div class="tech-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">DOM manipulation</span>
+            <span class="tag">CSS</span>
+          </div>
+          <div class="timeline-links">
+            <a class="view-link" href="https://ASharlayne.github.io/homework7web-dev/" target="_blank" rel="noopener noreferrer">View live site<span class="sr-only">: Trailhead</span> &rarr;</a>
+            <a class="view-link" href="https://github.com/ASharlayne/homework7web-dev" target="_blank" rel="noopener noreferrer">View code<span class="sr-only">: Trailhead</span> &rarr;</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item" id="homework-8">
+        <span class="timeline-marker" aria-hidden="true">3</span>
+        <div class="timeline-card">
+          <span class="timeline-skill">Skill: Form validation &amp; a public API</span>
+          <h2>Homework 8 &mdash; Accessible Contact Form with Validation &amp; API</h2>
+          <p>A contact form that validates name, email, age, and message on the client, and shows errors inline in a way a screen reader can follow. Once the form is valid, it fetches a short piece of advice from the public Advice Slip API &mdash; and still shows the success message if that request fails, so the form never depends on a third party to work.</p>
+          <div class="tech-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Fetch API</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <div class="timeline-links">
+            <a class="view-link" href="https://asharlayne.github.io/Homework-8-Form-with-Validation-API-Fetch/" target="_blank" rel="noopener noreferrer">View live site<span class="sr-only">: Accessible Contact Form + API</span> &rarr;</a>
+            <a class="view-link" href="https://github.com/ASharlayne/Homework-8-Form-with-Validation-API-Fetch" target="_blank" rel="noopener noreferrer">View code<span class="sr-only">: Accessible Contact Form + API</span> &rarr;</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item" id="homework-2-portfolio">
+        <span class="timeline-marker" aria-hidden="true">4</span>
+        <div class="timeline-card">
+          <span class="timeline-skill">Skill: Multi-page architecture &amp; accessibility</span>
+          <h2>Homework 2 &mdash; Developer Portfolio (v1)</h2>
+          <p>A first pass at a multi-page portfolio &mdash; home, projects, and about/contact &mdash; built around a dark, high-contrast design system. I ran WAVE against each page and fixed what it found: missing current-page indicators in the nav, links that opened new tabs without <code>rel="noopener noreferrer"</code>, and an accessible fieldset/legend structure for the contact form's radio group.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Accessibility</span>
+          </div>
+          <div class="timeline-links">
+            <a class="view-link" href="https://github.com/ASharlayne/homework_2_projects" target="_blank" rel="noopener noreferrer">View code<span class="sr-only">: Homework 2 Developer Portfolio</span> &rarr;</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-item" id="milestone-project">
+        <span class="timeline-marker" aria-hidden="true">5</span>
+        <div class="timeline-card">
+          <span class="timeline-skill">Skill: Accessibility auditing at depth</span>
+          <h2>Milestone Project &mdash; Developer Portfolio (v2)</h2>
+          <p>A revised version of the same portfolio, taken through a full WAVE and axe-core pass across all three pages &mdash; 0 errors, 0 contrast errors, 0 alerts, with an AIM score of 10/10 on each. I documented every text/background pair against the WebAIM contrast checker, tested the contact form keyboard-only, and applied Gestalt principles &mdash; proximity, similarity, and common region &mdash; deliberately rather than by accident.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">WCAG AA</span>
+            <span class="tag">axe-core</span>
+          </div>
+          <div class="timeline-links">
+            <a class="view-link" href="https://github.com/ASharlayne/milestone_project" target="_blank" rel="noopener noreferrer">View code<span class="sr-only">: Milestone Project</span> &rarr;</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="timeline-closing prose">
+      <p>This site is the next one: a single capstone draft that pulls a real project description from each of the five above, checked for zero WAVE errors, for peer review.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2026 ASharlayne. Built for a web development capstone.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ASharlayne" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
