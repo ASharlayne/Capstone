@@ -48,6 +48,23 @@ Then on GitHub: **Settings → Pages → Build and deployment → Source: Deploy
 from a branch → Branch: main / (root)** → Save. The live URL will be
 `https://ASharlayne.github.io/<repo-name>/`.
 
+## Connecting the contact form to Gmail
+
+The Gmail relay source is in [`contact-relay.gs`](./contact-relay.gs). To
+deploy it securely:
+
+1. Open [script.google.com](https://script.google.com/) and create a new
+   project.
+2. Paste the contents of `contact-relay.gs` into the script editor.
+3. Choose **Deploy → New deployment**, select **Web app**, and set **Execute
+   as** to yourself and **Who has access** to anyone.
+4. Authorize the requested Gmail permissions and copy the generated web-app
+   URL.
+5. Add that URL to the contact-form submission endpoint in `main.js`.
+
+The script sends messages to `a.sharlayne@gmail.com` and does not require
+publishing a Gmail password, API key, or other credential in this repository.
+
 ## Before peer review
 
 - [ ] Run WAVE (wave.webaim.org) against the deployed URL for all three pages.
