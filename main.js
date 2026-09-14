@@ -29,6 +29,7 @@
   const form = document.getElementById("contact-form");
   if (!form) return;
 
+  const contactRelayUrl = "https://script.google.com/macros/s/AKfycbxUR3IlveEADe3b9JrogC5-4vZrYNETchNDQJaT-f5s_m7XITa4MGUDRWjksz61M4Om/exec";
   const errorSummary = document.getElementById("error-summary");
   const errorList = document.getElementById("error-list");
   const successMessage = document.getElementById("success-message");
@@ -89,7 +90,7 @@
     radio.addEventListener("change", validateReason);
   });
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     successMessage.hidden = true;
 
@@ -122,9 +123,23 @@
     }
 
     errorSummary.hidden = true;
-    form.reset();
-    Object.keys(fields).forEach((key) => fields[key].input.setAttribute("aria-invalid", "false"));
-    successMessage.hidden = false;
-    successMessage.focus();
+    const formData = new URLSearchParams(new FormData(form));
+
+    try {
+      await fetch(contactRelayUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: formData,
+      });
+      form.reset();
+      Object.keys(fields).forEach((key) => fields[key].input.setAttribute("aria-invalid", "false"));
+      successMessage.hidden = false;
+      successMessage.focus();
+    } catch {
+      successMessage.textContent = "Sorry - your message could not be sent. Please try again.";
+      successMessage.hidden = false;
+      successMessage.focus();
+    }
   });
 })();

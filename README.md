@@ -26,7 +26,7 @@ not verified-by-tool, until you've checked it.
 
 - Mobile nav toggle (hamburger menu, `aria-expanded` state) on all three
   pages.
-- Full contact-form validation on `about.html`: per-field live validation,
+- Full contact-form validation and Gmail delivery on `about.html`: per-field live validation,
   inline `aria-live` errors, a focus-managed `role="alert"` error summary,
   and a success message on valid submit. Client-side only, as noted on the
   page.
