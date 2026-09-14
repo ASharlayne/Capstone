@@ -33,6 +33,8 @@
   const errorSummary = document.getElementById("error-summary");
   const errorList = document.getElementById("error-list");
   const successMessage = document.getElementById("success-message");
+  const submitButton = form.querySelector('button[type="submit"]');
+  const formStatus = document.getElementById("form-status");
 
   const fields = {
     name: {
@@ -93,6 +95,7 @@
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     successMessage.hidden = true;
+    if (formStatus) formStatus.textContent = "";
 
     const messages = [];
     Object.keys(fields).forEach((key) => {
@@ -124,6 +127,12 @@
 
     errorSummary.hidden = true;
     const formData = new URLSearchParams(new FormData(form));
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+    form.setAttribute("aria-busy", "true");
+    if (formStatus) formStatus.textContent = "Sending your message.";
 
     try {
       await fetch(contactRelayUrl, {
@@ -136,10 +145,18 @@
       Object.keys(fields).forEach((key) => fields[key].input.setAttribute("aria-invalid", "false"));
       successMessage.hidden = false;
       successMessage.focus();
-    } catch {
+    } catch (error) {
+      console.error("Contact form submission failed.", error);
       successMessage.textContent = "Sorry - your message could not be sent. Please try again.";
       successMessage.hidden = false;
       successMessage.focus();
+    } finally {
+      form.removeAttribute("aria-busy");
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send message";
+      }
+      if (formStatus) formStatus.textContent = "";
     }
   });
 })();

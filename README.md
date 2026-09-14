@@ -1,7 +1,7 @@
-# Capstone Portfolio &mdash; working draft
+# Capstone Portfolio
 
 Three pages (`index.html`, `projects.html`, `about.html`), one shared stylesheet
-(`styles.css`), and one shared script (`main.js`). No build step, no
+(`css/styles.css`), and one shared script (`js/main.js`). No build step, no
 frameworks, no external JS libraries.
 
 ## What's real vs. what's new
@@ -24,12 +24,12 @@ not verified-by-tool, until you've checked it.
 
 ## Working JavaScript
 
-- Mobile nav toggle (hamburger menu, `aria-expanded` state) on all three
+- Mobile nav toggle (keyboard-operable menu, `aria-expanded` state) on all three
   pages.
 - Full contact-form validation and Gmail delivery on `about.html`: per-field live validation,
   inline `aria-live` errors, a focus-managed `role="alert"` error summary,
-  and a success message on valid submit. Client-side only, as noted on the
-  page.
+  a disabled sending state, and a success message on valid submit. Client-side
+  only, as noted on the page.
 
 ## Deploying to GitHub Pages
 
@@ -60,7 +60,7 @@ deploy it securely:
    as** to yourself and **Who has access** to anyone.
 4. Authorize the requested Gmail permissions and copy the generated web-app
    URL.
-5. Add that URL to the contact-form submission endpoint in `main.js`.
+5. Add that URL to the contact-form submission endpoint in `js/main.js`.
 
 The script sends messages to `a.sharlayne@gmail.com` and does not require
 publishing a Gmail password, API key, or other credential in this repository.
@@ -68,6 +68,6 @@ publishing a Gmail password, API key, or other credential in this repository.
 ## Before peer review
 
 - [ ] Run WAVE (wave.webaim.org) against the deployed URL for all three pages.
-- [ ] Resize the browser down to ~360px to confirm the nav toggle and layout hold up.
+- [ ] Resize the browser down to 320px and up to 1200px to confirm the nav toggle and layout hold up.
 - [ ] Tab through the contact form keyboard-only, including triggering an error and using the error-summary links.
 - [ ] Swap in a real email/LinkedIn link in the footer if you want one beyond GitHub.

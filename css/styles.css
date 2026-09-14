@@ -55,6 +55,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; margin: 0 0 0.5em; }
@@ -75,6 +76,8 @@ textarea:focus-visible {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+button, input, textarea { font: inherit; }
 
 .skip-link {
   position: absolute;
@@ -311,6 +314,7 @@ textarea:focus-visible {
   background: var(--surface);
   padding: 1.5rem 1.75rem;
 }
+.timeline-card h2 { overflow-wrap: anywhere; }
 
 .timeline-skill {
   display: inline-block;
@@ -437,6 +441,24 @@ textarea:focus-visible {
   font-family: var(--font-body);
 }
 .submit-button:hover { background: var(--accent-strong); }
+.submit-button:disabled { cursor: wait; opacity: 0.72; }
+.form-status { color: var(--muted); min-height: 1.6em; margin: 0.75rem 0 0; }
+
+@media (max-width: 480px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  .header-nav { padding-left: 1rem; padding-right: 1rem; }
+  .hero { padding-top: 2rem; }
+  .hero .lede { font-size: 1.05rem; }
+  .cta-row { align-items: stretch; }
+  .cta-row .button,
+  .cta-row .button-secondary { text-align: center; width: 100%; }
+  .timeline-item { padding-left: 2.7rem; }
+  .timeline-card { padding: 1.25rem; }
+  .timeline::before { left: 0.85rem; }
+  .timeline-marker { left: 0; }
+  .contact-group { padding: 1.1rem; }
+  .submit-button { width: 100%; min-height: 2.9rem; }
+}
 
 /* =========================================================
    Footer
